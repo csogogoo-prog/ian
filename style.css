@@ -1,0 +1,299 @@
+/* --- 顏色 --- */
+:root 
+{
+    --primary-color: #cea35a;      /* 深橘色/主題色 (用來強調標題、按鈕和邊框) */
+    --accent-color: #FF9800;       /* 標準橘色 (導覽列背景、主要互動色) */
+    --background-light: #FFECB3;   /* 更淺的橘色/米黃色 (作為網頁背景色) */
+    --text-color: #333;            /* 保持深色文字 */
+    --white: #fff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+/* --- body設定 --- */
+body 
+{
+    font-family: 'Arial', '微軟正黑體', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light); /* 使用淺藍色背景 */
+    color: var(--text-color);
+}
+
+/* --- Header  --- */
+header 
+{
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+header h1 
+{
+    margin: 0;
+    font-size: 2.8em;
+}
+
+header p 
+{
+    font-size: 1.3em;
+    opacity: 0.9;
+}
+
+/* --- Nav --- */
+nav 
+{
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a 
+{
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover
+ {
+    background-color: rgba(255, 255, 255, 0.2); /* 懸停效果 */
+}
+
+/* --- Main --- */
+main 
+{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: var(--white);
+    box-shadow: 0 0 20px var(--shadow-light);
+    border-radius: 8px;
+    border-right: 8px solid var(--primary-color); 
+}
+
+.personal-info-header 
+{
+    display: flex; /* 啟用 Flexbox 佈局 */
+    align-items: center; /* 垂直置中對齊 */
+    gap: 30px; /* 照片和文字之間的間距 */
+    
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--background-light); 
+    
+    /* 讓文字靠左 */
+    text-align: left; 
+}
+
+/* --- 個人照片 --- */
+.profile-photo 
+{
+    /* 設置照片容器大小 */
+    width: 150px; 
+    height: 150px;
+    flex-shrink: 0; 
+    overflow: hidden;
+    border-radius: 50%; /* 讓照片變成圓形 */
+    border: 5px solid var(--primary-color); /* 橘色邊框 */
+}
+
+.profile-photo img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%; 
+    display: block;
+}
+
+.profile-text 
+{
+    flex-grow: 1; 
+}
+
+.personal-info-header h2 
+{
+    color: var(--primary-color);
+    font-size: 2.8em; 
+    margin: 0; 
+    border-bottom: none; 
+}
+
+.personal-info-header .slogan 
+{
+    font-style: italic;
+    color: var(--text-color);
+    margin-top: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#about p 
+{
+    max-width: 600px; 
+    margin-left: 0;
+    margin-right: auto;
+}
+
+h2 
+{
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--background-light);
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+
+section 
+{
+    padding: 20px 0;
+}
+
+/* --- 經驗區塊 --- */
+
+.experience-card 
+{
+    display: flex; 
+    gap: 20px; /* 圖片和文字間距 */
+    align-items: flex-start; /* 頂部對齊 */
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--background-light); /* 淺橘色邊框 */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 輕微陰影 */
+    background-color: var(--white);
+}
+
+/* 經驗卡片：左側圖片樣式 */
+.card-image-left 
+{
+    flex-shrink: 0; /* 防止圖片容器縮小 */
+    width: 120px; /* 圖片容器固定寬度 */
+    height: 120px; /* 圖片容器固定高度 */
+    overflow: hidden;
+    border-radius: 6px; /* 輕微圓角 */
+}
+
+.card-image-left img
+ {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 確保圖片填滿容器 */
+    display: block;
+}
+
+/* 經驗卡片：右側內容樣式 */
+.card-content-right 
+{
+    flex-grow: 1; /* 讓內容區塊佔據剩餘空間 */
+}
+
+.experience-card h3
+ {
+    color: var(--primary-color); /*使用深橘色 */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.experience-card .date
+ {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.experience-card ul 
+{
+    list-style-type: disc; 
+    margin-left: 20px;
+}
+
+/* --- 技能進度條樣式 --- */
+.skill-item h3 
+{
+    margin-bottom: 5px;
+}
+
+.progress-bar-container 
+{
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-bar
+ {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: right;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+/* --- Footer  --- */
+footer
+{
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    font-size: 0.9em;
+}
+
+/* --- 回到頂部按鈕樣式 (純 CSS) --- */
+#backToTopBtn
+ {
+    /* 固定位置 */
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    
+    /* 按鈕/圖片樣式 */
+    background: none; 
+    border: 3px solid var(--primary-color);
+    border-radius: 50%; /* 圓形 */
+    padding: 0; 
+    width: 60px; /* 固定寬度 */
+    height: 60px; /* 固定高度 */
+    cursor: pointer; 
+    overflow: hidden; 
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+    
+    /* 確保連結文字不顯示 */
+    text-decoration: none;
+    font-size: 0; /* 隱藏連結文字 (如果有的話) */
+}
+
+#backToTopBtn img 
+{
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    display: block;
+}
+
+#backToTopBtn:hover 
+{
+    opacity: 1;
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
